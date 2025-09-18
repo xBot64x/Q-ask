@@ -22,9 +22,8 @@ header {
     font-size: 36px;
     font-weight: bold;
     color: var(--Primary);
-    width: 224px;
-    margin-top: auto;
-    margin-bottom: auto;
+    width: calc(224px - 16px);
+    margin: auto 0 auto 16px;
 }
 
 .header form {
@@ -37,13 +36,13 @@ header {
 .header input[type="text"] {
     display: flex;
     position: relative;
-    width: calc(752px - 24px - 2px - 72px);
+    width: 752px;
     height: calc(53px - 2px);
     padding: 0 24px 0 72px;
     border: 1px solid var(--Border);
     border-radius: 27px;
     font-size: 16px;
-    background-image: url("/public/images/search.png");
+    background-image: url("/public/images/Search.png");
     background-repeat: no-repeat;
     background-position: 24px center;
     background-size: 33px 33px;
@@ -55,23 +54,37 @@ header {
 
 .header .ask {
     padding: 9px 22px;
-    background-color: var(--card);
+    background-color: var(--Card);
+    color: var(--Primary);
     border: 2px solid var(--Primary);
     border-radius: 8px;
     margin-top: auto;
     margin-bottom: auto;
 }
 
+.header .ask:hover {
+    background-color: var(--Primary);
+    color: var(--Background);
+}
+
 .header .profile {
     width: 54px;
     height: 54px;
-    background-color: var(--Border);
     border: none;
+}
+
+.header .profile img {
+    width: 54px;
+    height: 54px;
     border-radius: 50%;
+}
+
+.header .profile:hover img {
+    filter: brightness(80%);
 }
 
 .header .header-right {
     display: flex;
     gap: 32px;
-    margin: auto 0 auto auto;
+    margin: auto 16px auto auto;
 }

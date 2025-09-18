@@ -9,19 +9,19 @@
 
 .sidebar-bottom {
     position: relative;
-    margin-top: max("auto", 176px);
+    margin-top: 176px;
 }
 
 .sidebar a {
     display: flex;
-    height: 52px;
+    height: 48px;
     text-decoration: none;
-    color: var(--Text);
-    font-size: 18px;
+    color: var(--Text2);
     border-radius: 8px;
     align-items: center;
     padding: 0 0 0 14px;
     margin: 0 16px;
+    font-size: 14px;
 }
 
 .sidebar a:hover {

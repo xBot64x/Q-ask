@@ -18,8 +18,8 @@ Route::get('/saved', function () {
     return view('saved');
 });
 
-Route::get('/themes', function () {
-    return view('themes');
+Route::get('/tags', function () {
+    return view('tags');
 });
 
 Route::get('/profile', function () {
@@ -30,8 +30,8 @@ Route::get('/question', function () {
     return view('question');
 });
 
-Route::get('/theme', function () {
-    return view('theme');
+Route::get('/tag', function () {
+    return view('tag');
 });
 
 Route::get('/ask', function () {

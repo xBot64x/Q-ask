@@ -24,7 +24,7 @@
             </form>
             <div class="header-right">
                 <a href="{{ url('/ask') }}" class="ask">Zeptat se</a>
-                <a href="{{ url('/profile') }}" class="profile"></a>
+                <a href="{{ url('/profile') }}" class="profile"><img src="{{ asset('images/Profile.png') }}"></a>
             </div>
         </div>
     </header>
@@ -52,7 +52,7 @@
                     'label' => 'Uložené',
                 ],
                 [
-                    'url' => url('/themes'),
+                    'url' => url('/tags'),
                     'icon' => 'Book',
                     'label' => 'Témata',
                 ],
@@ -102,6 +102,12 @@
             </div>
         </div>
         <div class="content">
+            <div class="header-h2-content">
+                <h2 class="header-h2">@yield('title')</h2>
+                <div class="ordering">
+                    @yield('order')
+                </div>
+            </div>
             @yield('content')
         </div>
     </main>
@@ -122,7 +128,7 @@
                         <a href="{{ url('/contact') }}" class="footer-a2">Kontakt</a>
                         <a href="mailto:Bot64@proton.me">Email</a>
                         <a href="https://x.com">Twitter</a>
-                        <a href="https://intagram.com">Instagram</a>
+                        <a href="https://instagram.com">Instagram</a>
                         <a href="https://discord.com">Discord</a>
                     </div>
                     <div class="footer-links">

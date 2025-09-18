@@ -9,6 +9,11 @@
     --Selection: #355367;
     --Card: #fdfffd;
     --CardDarker: #e6e6e6;
+    --Tag: #e7e7e7;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 body {
@@ -67,8 +72,253 @@ span {
     font-size: 16px;
 }
 
-/* Popisek na každé stránce */
-h2 {
+.header-h2 {
     font-size: 24px;
+    font-weight: normal;
+    width: max-content;
+    margin: 0;
+}
+
+.header-h2-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 752px;
     margin: 0 0 32px 0;
+}
+
+.filter-button {
+    padding: 4px 8px;
+    color: var(--Text);
+    border: 1px solid var(--Border);
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.filter-button:hover {
+    background-color: var(--CardDarker);
+}
+
+.filter-button.active {
+    background-color: var(--Selection);
+    color: var(--Background);
+    border: 1px solid var(--Selection);
+}
+
+/* Karta s otázkou */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 752px;
+}
+
+.card {
+    background-color: var(--Card);
+    border: 1px solid var(--Border);
+    border-radius: 16px;
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.card:hover {
+    border: 1px solid var(--Primary);
+}
+
+.card-voting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-voting .vote {
+    z-index: 2;
+}
+
+.card-voting .vote:hover img {
+    background-color: var(--CardDarker);
+    border-radius: 50%;
+}
+
+.card-voting .vote img {
+    width: 44px;
+    height: 44px;
+}
+
+.card-voting p {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    max-width: 44px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+}
+
+.card-content .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-name {
+    font-size: 16px;
+    margin: 0;
+}
+
+.uploud-time {
+    font-size: 14px;
+    color: var(--Text2);
+}
+
+.card-content .card-profile-link {
+    margin: 4px 0 0 20px;
+}
+
+.card-content .card-profile {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding: 4px;
+}
+
+.card-content .card-profile-link {
+    text-decoration: none;
+    z-index: 2;
+}
+
+.card-content .card-profile-link:hover {
+    background-color: var(--CardDarker);
+    border-radius: 8px;
+}
+
+.card-content .profile-image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+}
+
+.card-content .card-profile-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-content .bookmark {
+    z-index: 2;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4px;
+}
+
+.card-content .bookmark img {
+    width: 24px;
+    height: 24px;
+}
+
+.card-content .bookmark:hover {
+    background-color: var(--CardDarker);
+}
+
+.card-text {
+    margin: 0 0 0 24px;
+    padding: 0;
+    font-size: 16px;
+    line-height: 19px;
+    max-width: 90%;
+    font-weight: bold;
+}
+
+.tags {
+    margin: 0 0 0 24px;
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    flex-wrap: wrap;
+    max-width: 90%;
+}
+
+.tag {
+    background-color: var(--Tag);
+    border-radius: 36px;
+    padding: 3px 13px;
+    text-decoration: none;
+    color: var(--Text);
+    font-size: 14px;
+    z-index: 2;
+}
+
+.tag:hover {
+    background-color: var(--Border);
+}
+
+.card-answers {
+    margin: 0 0 0 24px;
+    padding: 0;
+    font-size: 14px;
+    color: var(--Text2);
+}
+
+.cover-link {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+/* Stránkování */
+.pagination {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    margin: 0 auto 104px auto;
+}
+
+.page-number {
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    border-radius: 16px;
+    text-decoration: none;
+    color: var(--Text);
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-number:hover {
+    background-color: var(--CardDarker);
+}
+
+.page-dots {
+    height: 32px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination .active {
+    background-color: var(--Primary);
+    color: var(--Background);
+}
+
+.pagination .disabled {
+    color: var(--Border) !important;
+    pointer-events: none;
+    cursor: default;
 }
