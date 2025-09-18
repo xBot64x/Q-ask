@@ -1,0 +1,40 @@
+.sidebar {
+    width: 192px;
+    top: 69px;
+    position: sticky;
+    padding: 16px 0 0 0;
+    height: fit-content;
+    z-index: 10;
+}
+
+.sidebar-bottom {
+    position: relative;
+    margin-top: max("auto", 176px);
+}
+
+.sidebar a {
+    display: flex;
+    height: 52px;
+    text-decoration: none;
+    color: var(--Text);
+    font-size: 18px;
+    border-radius: 8px;
+    align-items: center;
+    padding: 0 0 0 14px;
+    margin: 0 16px;
+}
+
+.sidebar a:hover {
+    background-color: var(--CardDarker);
+}
+
+.sidebar a.active {
+    background-color: var(--Secondary);
+    color: var(--Background);
+}
+
+.sidebar a img {
+    width: 24px;
+    height: 24px;
+    margin-right: 16px;
+}

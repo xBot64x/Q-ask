@@ -1,0 +1,69 @@
+footer {
+    background-color: var(--Primary);
+}
+
+footer .footer-content {
+    max-width: 1312px;
+    margin: 0 auto;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: top;
+    padding: 88px 0 0 0;
+}
+
+footer .footer-top {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%;
+}
+
+footer .footer-links {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+footer .footer-links a {
+    color: var(--CardDarker);
+    text-decoration: none;
+    width: fit-content;
+    margin: 4px 0;
+}
+
+footer .footer-a1 {
+    font-size: 24px;
+}
+
+footer .footer-a2 {
+    margin-bottom: 32px !important;
+}
+
+footer .footer-links a:hover {
+    color: var(--Card);
+}
+
+footer .footer-bottom {
+    position: relative;
+    padding: 52px 0 16px 0;
+    display: flex;
+    width: 100%;
+}
+
+footer .footer-bottom span,
+footer .footer-bottom a {
+    color: var(--Border);
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer .footer-bottom a:hover {
+    color: var(--Card);
+    text-decoration: underline;
+}
+
+footer .footer-bottom .copyright {
+    width: 25%;
+}

@@ -1,0 +1,74 @@
+:root {
+    --Text: #0b060f;
+    --Text2: #575757;
+    --Background: #f8fdf8;
+    --Primary: #22577a;
+    --Secondary: #38a3a5;
+    --Accent: #007c99;
+    --Border: #bebebe;
+    --Selection: #355367;
+    --Card: #fdfffd;
+    --CardDarker: #e6e6e6;
+}
+
+body {
+    background-image: url("/public/images/background.png");
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-position: top left;
+    background-color: var(--Background);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+    width: 1312px;
+    margin: 69px auto 0 auto;
+    min-height: 644px;
+    height: 100%;
+    display: flex;
+}
+
+.content {
+    background-color: var(--Background);
+    padding: 32px 0 0 32px;
+    min-height: 100%;
+    width: calc(928px - 32px);
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+input,
+textarea,
+button,
+span {
+    font-family: "Roboto", sans-serif;
+    color: var(--Text);
+}
+
+p,
+a,
+li,
+input,
+textarea,
+button,
+span {
+    font-size: 16px;
+}
+
+/* Popisek na každé stránce */
+h2 {
+    font-size: 24px;
+    margin: 0 0 32px 0;
+}

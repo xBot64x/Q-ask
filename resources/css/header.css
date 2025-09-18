@@ -1,0 +1,77 @@
+header {
+    position: fixed;
+    width: 100%;
+    background-color: var(--Card);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08), 0 1px 4px rgba(0, 0, 0, 0.1);
+    z-index: 20;
+}
+
+.header {
+    width: 1312px;
+    height: 69px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.header a {
+    text-decoration: none;
+}
+
+.header .logo {
+    display: flex;
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--Primary);
+    width: 224px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header form {
+    position: relative;
+    display: flex;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header input[type="text"] {
+    display: flex;
+    position: relative;
+    width: calc(752px - 24px - 2px - 72px);
+    height: calc(53px - 2px);
+    padding: 0 24px 0 72px;
+    border: 1px solid var(--Border);
+    border-radius: 27px;
+    font-size: 16px;
+    background-image: url("/public/images/search.png");
+    background-repeat: no-repeat;
+    background-position: 24px center;
+    background-size: 33px 33px;
+}
+
+.header input[type="text"]:focus {
+    outline: 3px solid var(--Primary);
+}
+
+.header .ask {
+    padding: 9px 22px;
+    background-color: var(--card);
+    border: 2px solid var(--Primary);
+    border-radius: 8px;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header .profile {
+    width: 54px;
+    height: 54px;
+    background-color: var(--Border);
+    border: none;
+    border-radius: 50%;
+}
+
+.header .header-right {
+    display: flex;
+    gap: 32px;
+    margin: auto 0 auto auto;
+}
