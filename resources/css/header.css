@@ -52,7 +52,7 @@ header {
     outline: 3px solid var(--Primary);
 }
 
-.header .ask {
+.header .btn {
     padding: 9px 22px;
     background-color: var(--Card);
     color: var(--Primary);
@@ -62,9 +62,20 @@ header {
     margin-bottom: auto;
 }
 
-.header .ask:hover {
+.header .btn-secondary {
+    padding: 9px 22px;
+    color: var(--Primary);
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header .btn:hover {
     background-color: var(--Primary);
     color: var(--Background);
+}
+
+.header .btn-secondary:hover {
+    text-decoration: underline;
 }
 
 .header .profile {

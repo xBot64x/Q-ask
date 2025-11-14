@@ -1,13 +1,11 @@
 <?php
 
+use App\Http\Controllers\AuthController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostController;
 
 Route::get('/', function () {
     return view('home');
-});
-
-Route::get('/questions', function () {
-    return view('questions');
 });
 
 Route::get('/users', function () {
@@ -42,10 +40,7 @@ Route::get('/settings', function () {
     return view('settings');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::resource('posts', PostController::class);
 
-Route::get('/login', function () {
-    return view('login');
-});
+Route::get('/register', [AuthController::class, 'showRegister'])->name('show.register');
+Route::get('/login', [AuthController::class, 'showLogin'])->name('show.login');

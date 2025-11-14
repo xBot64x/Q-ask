@@ -23,8 +23,14 @@
                 <input type="text" placeholder="Vyhledat...">
             </form>
             <div class="header-right">
-                <a href="{{ url('/ask') }}" class="ask">Zeptat se</a>
-                <a href="{{ url('/profile') }}" class="profile"><img src="{{ asset('images/Profile.png') }}"></a>
+                @if (false)
+                    <a href="{{ route('posts.create') }}" class="btn">Zeptat se</a>
+                    <a href="{{ url('/profile') }}" class="profile"><img src="{{ asset('images/Profile.png') }}"></a>
+                @else
+                    <a href="{{ route('show.login') }}" class="btn-secondary">Přihlásit se</a>
+                    <a href="{{ route('show.register') }}" class="btn">Registrovat se</a>
+                @endif
+
             </div>
         </div>
     </header>
@@ -37,7 +43,7 @@
                     'label' => 'Domů',
                 ],
                 [
-                    'url' => url('/questions'),
+                    'url' => route('posts.index'),
                     'icon' => 'Chat_bubble',
                     'label' => 'Otázky',
                 ],
