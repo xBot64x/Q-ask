@@ -50,6 +50,10 @@ main {
     margin: 0 auto;
 }
 
+.middle {
+    text-align: center;
+}
+
 .main-content {
     width: 752px;
     display: flex;
@@ -461,6 +465,11 @@ button {
     background-color: var(--Card);
     color: var(--Primary);
     border: 2px solid var(--Primary);
+}
+
+.authentication .middle {
+    margin: 8px 0 0 0;
+    color: var(--Text2);
 }
 
 .auth-footer {

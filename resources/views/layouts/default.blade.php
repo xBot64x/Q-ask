@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fdfffd">
-    <title>Home</title>
+    <title>@yield('title', 'Q-Ask')</title>
+    @vite('https://necolas.github.io/normalize.css/8.0.1/normalize.css')
     @vite('resources/css/app.css')
     @vite('resources/css/header.css')
     @vite('resources/css/sidebar.css')
@@ -17,20 +18,24 @@
 <body>
     <header>
         <div class="header">
-            <a href="{{ url('/') }}" class="logo">Q-ask</a>
+            <a href="{{ route('home') }}" class="logo">Q-ask</a>
             <form>
                 @csrf
                 <input type="text" placeholder="Vyhledat...">
             </form>
             <div class="header-right">
-                @if (false)
-                    <a href="{{ route('posts.create') }}" class="btn">Zeptat se</a>
-                    <a href="{{ url('/profile') }}" class="profile"><img src="{{ asset('images/Profile.png') }}"></a>
-                @else
+                @guest
                     <a href="{{ route('show.login') }}" class="btn-secondary">Přihlásit se</a>
                     <a href="{{ route('show.register') }}" class="btn">Registrovat se</a>
-                @endif
-
+                @endguest
+                @auth
+                    <a href="{{ route('posts.create') }}" class="btn">Zeptat se</a>
+                    <form method="POST" action="{{ route('logout.post') }}">
+                        @csrf
+                        <button type="submit" class="btn-secondary">Odhlásit se</button>
+                    </form>
+                    <a href="{{ url('/profile') }}" class="profile"><img src="{{ asset('images/Profile.png') }}"></a>
+                @endauth
             </div>
         </div>
     </header>
@@ -38,7 +43,7 @@
         @php
             $sidebarTopLinks = [
                 [
-                    'url' => url('/'),
+                    'url' => route('home'),
                     'icon' => 'Home',
                     'label' => 'Domů',
                 ],
@@ -48,17 +53,17 @@
                     'label' => 'Otázky',
                 ],
                 [
-                    'url' => url('/users'),
+                    'url' => route('users'),
                     'icon' => 'Users',
                     'label' => 'Uživatelé',
                 ],
                 [
-                    'url' => url('/saved'),
+                    'url' => route('saved'),
                     'icon' => 'Bookmark',
                     'label' => 'Uložené',
                 ],
                 [
-                    'url' => url('/tags'),
+                    'url' => route('tags'),
                     'icon' => 'Book',
                     'label' => 'Témata',
                 ],
@@ -127,7 +132,7 @@
                     </div>
                     <div class="footer-links">
                         <a href="{{ url('/') }}" class="footer-a2">Q-ask</a>
-                        <a href="https://github.com">Zdrojový kód</a>
+                        <a href="https://github.com/xBot64x/Q-ask">Zdrojový kód</a>
                         <a href="{{ url('/about') }}">O nás</a>
                     </div>
                     <div class="footer-links">
@@ -136,12 +141,13 @@
                         <a href="https://x.com">Twitter</a>
                         <a href="https://instagram.com">Instagram</a>
                         <a href="https://discord.com">Discord</a>
+                        <a href="https://github.com/xBot64x">GitHub</a>
                     </div>
                     <div class="footer-links">
-                        <a href="{{ url('/') }}" class="footer-a2">Moje další stránky</a>
-                        <a href="https://github.com">Hudbaweb</a>
-                        <a href="https://github.com">Femboycraft</a>
-                        <a href="https://github.com">Pictera</a>
+                        <a href="https://github.com/xBot64x?tab=repositories" class="footer-a2">Moje další stránky</a>
+                        <a href="https://github.com/xBot64x/hudebni-web">Hudbaweb</a>
+                        <a href="https://github.com/xBot64x/Femboycraft">Femboycraft</a>
+                        <a href="https://github.com/xBot64x/Pictera">Pictera</a>
                         <a href="https://github.com">PHP tutoriál</a>
                     </div>
                 </div>

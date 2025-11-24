@@ -1,8 +1,7 @@
 @extends('layouts.default')
 
-@section('title')
-    Nejnovější otázky
-@endsection
+@section('title', 'Nejnovější otázky')
+
 
 @section('order')
     <a href="#" class="filter-button active">Nejnovější</a>

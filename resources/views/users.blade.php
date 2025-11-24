@@ -1,8 +1,6 @@
 @extends('layouts.default')
 
-@section('title')
-    Témata
-@endsection
+@section('title', 'Uživatelé')
 
 @section('order')
     <a href="#" class="filter-button active">Abecedně</a>
