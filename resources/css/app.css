@@ -10,6 +10,7 @@
     --Card: #fdfffd;
     --CardDarker: #e6e6e6;
     --Tag: #e7e7e7;
+    --Dangerous: #ca0000;
     --DefaultSize: 16px;
 }
 
@@ -219,6 +220,7 @@ button {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .card-content .card-profile-info {
@@ -435,7 +437,18 @@ button {
     margin: 16px 0 8px 0;
 }
 
-.authentication input {
+.bottom-label {
+    margin-top: 0px !important;
+}
+
+.top-label {
+    color: var(--Text2);
+    font-size: 14px !important;
+}
+
+.authentication input[type="text"],
+.authentication input[type="email"],
+.authentication input[type="password"] {
     width: 100%;
     height: 53px;
     padding: 8px 24px;
@@ -469,7 +482,6 @@ button {
 
 .authentication .middle {
     margin: 8px 0 0 0;
-    color: var(--Text2);
 }
 
 .auth-footer {

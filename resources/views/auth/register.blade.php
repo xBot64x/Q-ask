@@ -34,6 +34,7 @@
                         <p class="error">{{ $error }}</p>
                     @endforeach
                 @endif
+                <p class="middle">{{ session('success') }}</p>
             </div>
         </form>
     </div>

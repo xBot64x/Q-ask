@@ -88,6 +88,7 @@ header {
     width: 54px;
     height: 54px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
 .header .profile:hover img {
@@ -98,4 +99,96 @@ header {
     display: flex;
     gap: 32px;
     margin: auto 16px auto auto;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    height: 32px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--Card);
+    padding: 8px 8px;
+    min-width: 140px;
+    border-radius: 16px;
+    flex-direction: column;
+    gap: 4px;
+    left: 50%;
+    margin-top: 32px;
+    transform: translateX(-50%);
+}
+
+.dropdown-content a {
+    color: var(--Text);
+    height: 32px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    border-radius: 12px;
+}
+
+.dropdown-content a:hover {
+    background-color: var(--CardDarker);
+}
+
+.dropdown-content hr {
+    border: none;
+    border-top: 1px solid var(--Border);
+    width: calc(100% - 16px);
+    height: 0px;
+    margin: 0px 8px;
+    padding: 0px;
+}
+
+.dropdown-content form {
+    width: 100%;
+}
+
+.dropdown-content button {
+    color: var(--Text);
+    height: 32px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 0px 8px;
+    border-radius: 12px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+}
+
+.dropdown-content button:hover {
+    background-color: var(--CardDarker);
+}
+
+.dropdown:hover .dropdown-content {
+    display: flex;
+}
+
+.dropdown-content:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin-left: -10px;
+    margin-top: -10px;
+    width: 0;
+    z-index: 1;
+    height: 0;
+    border-bottom: solid 10px var(--Card);
+    border-left: solid 10px transparent;
+    border-right: solid 10px transparent;
 }

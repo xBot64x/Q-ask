@@ -7,11 +7,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="theme-color" content="#fdfffd">
     <title>@yield('title', 'Q-Ask')</title>
-    @vite('https://necolas.github.io/normalize.css/8.0.1/normalize.css')
     @vite('resources/css/app.css')
     @vite('resources/css/header.css')
     @vite('resources/css/sidebar.css')
     @vite('resources/css/footer.css')
+    @vite('resources/css/settings.css')
     @vite('resources/js/app.js')
 </head>
 
